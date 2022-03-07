@@ -65,7 +65,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns:[
                 {
-                    from: path.resolve(__dirname,'src/favicon-32x32.png'),
+                    from: path.resolve(__dirname,'src/assets/images/favicon-32x32.png'),
                     to:path.resolve(__dirname,'dist')
                 }
             ]
@@ -95,7 +95,13 @@ module.exports = {
             },
             {
                 test:/\.(s[ac]ss)$/,
-                use:[MiniCssExtractPlugin.loader,'css-loader','sass-loader']
+                use:[MiniCssExtractPlugin.loader,'css-loader',
+                {
+                    loader: 'sass-loader',
+                    options:{
+                        implementation:require('sass')
+                    }
+                }]
             },
             {
                 test:/\.js$/,

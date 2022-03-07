@@ -2,15 +2,5 @@ include ./nav/nav
 include ./top-line/top-line
 mixin header()
   header
-    .top-line
-      .contacts 8 (812) 123-45-67 | Работаем 7 дней в неделю | 9:00 — 18:00
-      .login Войти / Регистрация
-    nav
-      .nav__logo porten
-      ul.nav__links
-        li.nav__link Понравилось
-        li.nav__link Личный кабинет
-        li.nav__link Настройки
-      .nav__controls 
-        .nav__cart
-        .nav__search
+    +top-line()
+    +nav({link:'', text:'Понравилось'}, {link:'', text: 'Личный кабинет'}, {link:'', text: 'Настройки'})
