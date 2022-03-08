@@ -1,6 +1,7 @@
 include ../components/header/header
+include ../components/main/main
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -8,15 +9,10 @@ html(lang="en")
     title Porten
   body 
     +header()
-    section.main
-      .banner
-        .logo
-        .banner-desc
-      .items-section
-      .button-section
+    +main()
       .image-section 
-      .description-section
-      .items-section 
-      .items-section 
+      section.description-section
+      section.items-section 
+      section.items-section 
       .about
     footer

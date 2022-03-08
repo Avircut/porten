@@ -1,0 +1,15 @@
+mixin itemsSection(itemsSection,style)
+  if(typeof(style) == 'undefined')
+    -style=''
+
+  .items-section(class=`${style}`)
+    h2.items-section__title.title=itemsSection.title
+    .items-section__container.container
+      each item in itemsSection.items
+        .items-section__item.item
+          .items-section__item-image-container.image-container
+            .items-section__item-image.item-image(style=`background-image:url(${item.image})`)
+          if(typeof(item.name) != 'undefined')
+            span.items-section__item-name.item-name=item.name
+          if(typeof(item.price) != 'undefined')
+            span.items-section__item-price.item-price=item.price

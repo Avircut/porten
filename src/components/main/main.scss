@@ -1,0 +1,9 @@
+@use './banner/banner.scss';
+@use './section/section';
+@use '../button/button.scss';
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

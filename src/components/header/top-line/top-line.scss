@@ -1,3 +1,4 @@
+@use '../../variables.scss' as var;
 .top-line{
   background: #000;
 
@@ -33,11 +34,10 @@
     }
   }
   &__wrapper{
-    max-width: 108rem;
+    max-width: var.$middle_wrapper_width;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width:100%;
     justify-content: space-between;
     margin:0 auto;
   }
