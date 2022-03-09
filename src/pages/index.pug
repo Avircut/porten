@@ -1,5 +1,6 @@
 include ../components/header/header
 include ../components/main/main
+include ../components/footer/footer
 doctype html
 html(lang="ru")
   head
@@ -10,9 +11,4 @@ html(lang="ru")
   body 
     +header()
     +main()
-      .image-section 
-      section.description-section
-      section.items-section 
-      section.items-section 
-      .about
-    footer
+    +footer()

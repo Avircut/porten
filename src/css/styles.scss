@@ -1,10 +1,17 @@
 @use '../components/header/header.scss';
 @use '../components/main/main.scss';
+@use '../components/footer/footer.scss';
 @use '../components/variables.scss' as var;
 
 @font-face {
   font-family: 'PT Sans';
   src: url(../assets/fonts/PTSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../assets/fonts/PTSans-Bold.ttf);
+  font-weight: 700;
 }
 @font-face {
   font-family: 'Post No Bills Jaffna';

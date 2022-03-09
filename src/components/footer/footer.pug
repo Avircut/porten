@@ -1,0 +1,7 @@
+-const aboutContent = require('../components/footer/about/about.js').default
+include ./about/about
+include ./last-line/last-line
+mixin footer()
+  footer
+    +about(aboutContent)
+    +lastLine()
