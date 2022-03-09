@@ -1,5 +1,7 @@
 @use '../../variables.scss' as var;
 @use '../../logo/logo.scss';
+@use '../burger/burger';
+
 .nav{
   background: #0f0f0f;
   &__logo{
@@ -7,6 +9,7 @@
     line-height: 4.9rem;
     padding-top:1.5rem;
     padding-bottom: 1.6rem;
+    z-index: 1;
   }
   &__links{
     list-style: none;
@@ -63,5 +66,11 @@
   &__control-group{
     display: flex;
     flex-direction: row;
+    @media screen and (max-width:640px) {
+        display: none;
+    }
+    @media screen and (min-width:640px) {
+        display: flex;
+    }
   }
 }

@@ -1,0 +1,50 @@
+@use './overlay/overlay.scss';
+.burger{
+  border:1px solid #FFF;
+  width: 5rem;
+  height:1px;
+  position: relative;
+  background-color: #FFF;
+  &::after{
+    content:'';
+    border:1px solid #FFF;
+    background-color: #FFF;
+    width: 5rem;
+    height:1px;
+    bottom:.7rem;
+    left:-1px;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  &::before{
+    box-sizing: border-box;
+    content:'';
+    border:1px solid #FFF;
+    position: absolute;
+    background-color: #FFF;
+    width: 5rem;
+    height:1px;
+    top:.7rem;
+    left:-1px;
+  }
+  &__links{
+    display: none;
+  }
+  &__container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height:8rem;
+    width:8rem;
+    cursor: pointer;
+    @media screen and (max-width:640px) {
+        display: flex;
+    }
+    @media screen and (min-width:640px) {
+        display: none;
+    }
+    &:hover{
+      background: #1f1f1f;
+    }
+  }
+}

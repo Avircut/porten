@@ -1,4 +1,5 @@
-mixin nav(...links)
+include ../burger/burger
+mixin nav(links)
   nav.nav
     .nav__wrapper
       .nav__logo.logo porten
@@ -10,3 +11,4 @@ mixin nav(...links)
         .nav__controls
           .nav__cart
           .nav__search
+      +burger(links)
