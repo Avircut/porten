@@ -13,6 +13,7 @@ class Burger{
   }
   onClick(e){
     if(!this.isOpen && (!this.isAnimating)) {
+      this.overlay.classList.remove('disabled');
       this.overlay.classList.add('slideDown');
       this.isAnimating=true;
       this.overlay.addEventListener('animationend', () => {
@@ -20,8 +21,6 @@ class Burger{
         this.isOpen=true;
         this.overlay.classList.remove('disabled');
         this.overlay.classList.remove('slideDown');
-        this.overlay.style.height=`${this.links.offsetHeight}px`;
-
       })
     } else if (!this.isAnimating) {
       this.overlay.classList.add('slideUp');
@@ -31,7 +30,6 @@ class Burger{
         this.isAnimating=false;
         this.overlay.classList.add('disabled');
         this.overlay.classList.remove('slideUp');
-        this.overlay.style.height=`0px`;
       })
     }
   }
