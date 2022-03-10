@@ -2,30 +2,35 @@ class Burger{
   constructor(el){
     this.el = el;
     this.overlay = el.parentNode.querySelector('.overlay')
-    this.animation = null;
+    this.isAnimating = false;
     this.body = document.querySelector('body');
+    this.overlay.classList.add('disabled');
     this.isOpen = false;
     el.addEventListener('click', (e) => {
       this.onClick(e)
     })
   }
   onClick(e){
-    if(!this.isOpen) {
+    if(!this.isOpen && (!this.isAnimating)) {
       this.overlay.classList.add('slideDown');
-      setTimeout(() => {
+      this.isAnimating=true;
+      this.overlay.addEventListener('animationend', () => {
+        this.isAnimating=false;
         this.isOpen=true;
-        this.body.style.overflow='hidden';
+        this.overlay.classList.remove('disabled');
         this.overlay.classList.remove('slideDown');
-        this.overlay.style.height=`${window.innerHeight}px`;
-      },300) 
-    } else {
+        this.overlay.style.height=`${document.body.clientHeight}px`;
+      })
+    } else if (!this.isAnimating) {
       this.overlay.classList.add('slideUp');
-      setTimeout(() => {
+      this.isAnimating = true;
+      this.overlay.addEventListener('animationend', () => {
         this.isOpen=false;
-        this.body.style.overflow='scroll';
+        this.isAnimating=false;
+        this.overlay.classList.add('disabled');
         this.overlay.classList.remove('slideUp');
         this.overlay.style.height=`0px`;
-      },300) 
+      })
     }
   }
 }
