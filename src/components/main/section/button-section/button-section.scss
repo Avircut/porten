@@ -1,11 +1,13 @@
 .button-section{
-  width:86.5rem;
+  width:45%;
+  max-width: 86.5rem;
   padding-top:37rem;
   &__button{
     margin-top:3rem;
   }
   @media screen and (max-width:1800px) {
     width: 100%;
+    max-width: 192rem;
     justify-content: flex-end;
     padding-bottom: 5rem;
     background-size:cover;
