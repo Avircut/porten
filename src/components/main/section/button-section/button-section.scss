@@ -4,4 +4,11 @@
   &__button{
     margin-top:3rem;
   }
+  @media screen and (max-width:1800px) {
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+    background-size:cover;
+    background-position: center;
+  }
 }

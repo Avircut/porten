@@ -1,5 +1,5 @@
 .items-section{
-  padding:9.3rem 1.5rem;
+  padding:9.3rem 1.5rem 5.3rem 1.5rem;
   width:104rem;
   &__title::after{
     margin-top:5rem;
@@ -17,6 +17,7 @@
     flex-direction: column;
     background-position: center;
     background-size: cover;
+    margin-bottom:4rem;
     font-family: Playfair Display, Georgia, serif;
     &-image{
       width:21.4rem;

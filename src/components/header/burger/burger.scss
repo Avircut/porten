@@ -28,7 +28,25 @@
     left:-1px;
   }
   &__links{
-    display: none;
+    margin-top:20rem;
+    list-style: none;
+    height:8rem;
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:3.1rem 2rem;
+      font-size:1.4rem;
+      font-family: PT Sans, Arial, sans-serif;
+      line-height: 1.8rem;
+    }
+  }
+  &__link{
+    height: 100%;
+    transition: .4s all ease-in-out;
+    &:hover{
+      background: #1f1f1f;
+    }
   }
   &__container{
     display: none;
@@ -36,6 +54,7 @@
     align-items: center;
     height:8rem;
     width:8rem;
+    z-index: 1;
     cursor: pointer;
     @media screen and (max-width:640px) {
         display: flex;
