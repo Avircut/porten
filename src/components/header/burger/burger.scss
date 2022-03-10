@@ -28,9 +28,12 @@
     left:-1px;
   }
   &__links{
-    margin-top:20rem;
+    padding-top:20rem;
+    position:relative;
     list-style: none;
-    height:8rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     a{
       display: flex;
       align-items: center;
@@ -43,6 +46,7 @@
   }
   &__link{
     height: 100%;
+    width: 100%;
     transition: .4s all ease-in-out;
     &:hover{
       background: #1f1f1f;

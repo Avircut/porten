@@ -49,6 +49,7 @@ h2{
   flex-direction: column;
   letter-spacing: .1rem;
   text-align: center;
+  z-index: 0;
   &::after{
     content:'';
     display: block;
