@@ -8,4 +8,8 @@
   &__button{
     margin-top:6.1rem;
   }
+  @media screen and (max-width:1800px) {
+    margin-top: 3rem;
+    
+  }
 }

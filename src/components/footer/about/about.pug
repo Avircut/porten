@@ -16,6 +16,6 @@ mixin about(content)
         if(item.type==='email')
           if(typeof(item.desc)!='undefined')
             p.about__desc.desc=item.desc
-          label 
+          label.about__label
             input.about__email.email(type="email" placeholder="Ваша почта")
             button.about__button.button Подписаться
